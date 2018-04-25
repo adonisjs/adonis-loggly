@@ -27,7 +27,7 @@ Now, you are all set to make use of this provider. Just make sure to define the 
 ```js
 module.exports = {
   logger: {
-    transporter: 'loggly',
+    transport: 'loggly',
 
     loggly: {
       driver: 'loggly',
