@@ -13,7 +13,7 @@ Once provider has been registered, you can add it to the list of loggers inside 
 ```js
 module.exports = {
   logger: {
-    transporter: 'loggly',
+    transport: 'loggly',
 
     loggly: {
       driver: 'loggly',
