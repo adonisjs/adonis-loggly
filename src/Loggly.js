@@ -28,8 +28,17 @@ class Loggly {
       timestamp: new Date().toLocaleTimeString()
     }, config)
 
+    /**
+     * Loggly returns 400 when tags are defined to an empty
+     * array. So we just remove the tags here, if it's
+     * an empty array
+     */
+    if (this.config.tags && this.config.tags.length === 0) {
+      delete this.config.tags
+    }
+
     this.logger = new Winston.Logger({
-      transports: [new Winston.transports.Loggly(config)]
+      transports: [new Winston.transports.Loggly(this.config)]
     })
 
     this.logger.setLevels(this.levels)
