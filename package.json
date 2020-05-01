@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "adonisjs",
@@ -21,7 +23,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.10",
-    "winston-loggly-bulk": "^2.0.2"
+    "winston-loggly-bulk": "^2.0.2",
+    "snyk": "^1.316.1"
   },
   "repository": {
     "type": "git",
@@ -30,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/adonisjs/adonis-loggly/issues"
   },
-  "homepage": "https://github.com/adonisjs/adonis-loggly#readme"
+  "homepage": "https://github.com/adonisjs/adonis-loggly#readme",
+  "snyk": true
 }
